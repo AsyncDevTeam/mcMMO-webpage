@@ -139,10 +139,6 @@ body main .content .img img.alone {
     grid-column: span 2;
   }
 }
-body main .content .wrapper-text,
-body main .content .wrapper-cl {
-  text-align: justify;
-}
 body main .content .wrapper-text h1,
 body main .content .wrapper-cl h1 {
   margin: 2vh 0;
@@ -212,7 +208,6 @@ body main .content .wrapper-cl .element .version .pos .label {
 }
 body main .content .wrapper-cl .element .content-cl {
   width: 100%;
-  text-align: justify;
 }
 body main .content .wrapper-cl .element .content-cl img {
   width: 100%;
