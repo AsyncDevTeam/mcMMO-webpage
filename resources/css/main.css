@@ -11,8 +11,11 @@ body {
   font-family: "Noto Sans Mende Kikakui", sans-serif;
   --width-page:80%;
   --active-color:rgba(0 123 255 / 100%);
+  --active-color-2:rgba(0 123 255 / 50%);
+  --active-color-3:rgba(40 168 136 / 100%);
+  --active-color-4:rgba(40 168 136 / 50%);
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1400px) {
   body {
     --width-page:50%;
   }
@@ -29,6 +32,14 @@ body main {
   align-items: center;
   align-content: center;
   flex-direction: column;
+  font-size: 1.2em;
+}
+body main a {
+  color: var(--active-color);
+  text-decoration: none;
+}
+body main a:hover {
+  color: var(--active-color-2);
 }
 body main header {
   width: 100%;
@@ -37,6 +48,7 @@ body main header {
   position: sticky;
   top: 0;
   background: white;
+  z-index: 9999;
 }
 body main header .container {
   display: flex;
@@ -54,17 +66,21 @@ body main header .container .tabs {
   align-content: center;
   flex-direction: row;
   gap: 1em;
+  overflow-x: auto;
 }
 body main header .container .top img,
 body main header .container .tabs img {
   width: 50px;
+}
+body main header .container .top a#a-active,
+body main header .container .tabs a#a-active {
+  text-decoration: underline;
 }
 body main header .container .top {
   justify-content: flex-start;
 }
 body main header .container .tabs {
   justify-content: space-between;
-  width: 100%;
 }
 body main header .container .tabs li {
   text-decoration: none;
@@ -72,10 +88,39 @@ body main header .container .tabs li {
 }
 body main header .container .tabs li.github {
   margin-right: auto;
+  padding: 0.2em 0.5em;
+  background: var(--active-color);
+  border-radius: 5px;
+}
+body main header .container .tabs li.github:hover {
+  background: var(--active-color-2);
+}
+body main header .container .tabs li.github a {
+  color: #fff;
+  text-decoration: none;
 }
 body main .content {
   width: var(--width-page);
   margin: 5vh 0;
+}
+body main .content h1#h1-top {
+  margin: 5vh auto 5vh;
+}
+body main .content div.github {
+  text-decoration: none;
+  list-style: none;
+  width: fit-content;
+  margin: 1em auto 1em 0;
+  padding: 0.2em 0.5em;
+  background: var(--active-color);
+  border-radius: 5px;
+}
+body main .content div.github:hover {
+  background: var(--active-color-2);
+}
+body main .content div.github a {
+  color: #fff;
+  text-decoration: none;
 }
 body main .content .img {
   display: grid;
@@ -100,8 +145,17 @@ body main .content .wrapper-text {
 body main .content .wrapper-text h1 {
   margin: 2vh 0;
 }
-body main .content .wrapper-text p a {
-  color: var(--active-color);
+body main .content .wrapper-text h1 a {
+  font-size: 75%;
+}
+body main .content .wrapper-text p {
+  line-height: 1.8;
+}
+body main .content .wrapper-text p span {
+  color: var(--active-color-3);
+  padding: 0.2em 0.5em;
+  background: #e2e2e2;
+  border-radius: 5px;
 }
 body main .content .wrapper-text ul {
   margin-left: 50px;
@@ -110,7 +164,55 @@ body main .content .wrapper-text ul li {
   margin: 1em 0;
 }
 body main .content .wrapper-text ul li.active {
-  color: var(--active-color);
+  color: var(--active-color-3);
+}
+body main .content .wrapper-cl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 10vh;
+}
+body main .content .wrapper-cl .element {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6vw;
+  width: 100%;
+}
+@media all and (max-width: 600px) {
+  body main .content .wrapper-cl .element {
+    grid-template-columns: 1fr;
+  }
+}
+body main .content .wrapper-cl .element .version {
+  display: flex;
+  flex-direction: column;
+}
+body main .content .wrapper-cl .element .version .pos {
+  position: sticky;
+  top: 20vh;
+  display: flex;
+  flex-direction: column;
+}
+body main .content .wrapper-cl .element .version .pos .label {
+  background: #e2e2e2;
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  width: fit-content;
+  margin-bottom: 0.5em;
+}
+body main .content .wrapper-cl .element .content-cl {
+  width: 100%;
+  text-align: justify;
+}
+body main .content .wrapper-cl .element .content-cl img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+}
+body main .content .wrapper-cl .element .content-cl h2 {
+  margin-bottom: 2vh;
 }
 body .btn-main {
   width: 100%;

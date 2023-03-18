@@ -17,8 +17,11 @@ body{
 
   --width-page:80%;
   --active-color:rgba(0 123 255 / 100%);
+  --active-color-2:rgba(0 123 255 / 50%);
+  --active-color-3:rgba(40 168 136 / 100%);
+  --active-color-4:rgba(40 168 136 / 50%);
 
-  @media all and (min-width: 1200px) {
+  @media all and (min-width: 1400px) {
     --width-page:50%;
   }
   @media all and (max-width: 600px) {
@@ -28,6 +31,14 @@ body{
     width: 100%;
     @include centerFlex;
     flex-direction: column;
+    font-size: 1.2em;
+
+    a{
+      color: var(--active-color);
+      text-decoration: none;
+      &:hover{color: var(--active-color-2)}
+    }
+
     header{
       width: 100%;
       border-bottom: 1px solid #e2e2e2;
@@ -35,6 +46,7 @@ body{
       position: sticky;
       top: 0;
       background: white;
+      z-index: 9999;
       .container{
         display: flex;
         flex-wrap: wrap;
@@ -47,19 +59,28 @@ body{
           @include centerFlex;
           flex-direction: row;
           gap: 1em;
+          overflow-x: auto;
           img{width: 50px}
+          a#a-active{text-decoration: underline;}
         }
-        .top{
-          justify-content: flex-start;
-          //margin: auto auto 1em;
-        }
+        .top{justify-content: flex-start}
         .tabs{
           justify-content: space-between;
-          width: 100%;
+          //width: 100%;
           li{
             text-decoration: none;
             list-style: none;
-            &.github{margin-right: auto}
+            &.github{
+              margin-right: auto;
+              padding: .2em .5em;
+              background: var(--active-color);
+              &:hover{background: var(--active-color-2)}
+              border-radius: 5px;
+              a{
+                color: #fff;
+                text-decoration: none;
+              }
+            }
           }
         }
       }
@@ -67,6 +88,21 @@ body{
     .content{
       width: var(--width-page);
       margin: 5vh 0;
+      h1#h1-top{margin: 5vh auto 5vh}
+      div.github{
+        text-decoration: none;
+        list-style: none;
+        width: fit-content;
+        margin: 1em auto 1em 0;
+        padding: .2em .5em;
+        background: var(--active-color);
+        &:hover{background: var(--active-color-2)}
+        border-radius: 5px;
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
       .img{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -82,13 +118,70 @@ body{
       }
       .wrapper-text{
         text-align: justify;
-        h1{margin: 2vh 0}
-        p{ a{color: var(--active-color)} }
+        h1{
+          margin: 2vh 0;
+          a{font-size: 75%}
+        }
+        p{
+          line-height: 1.8;
+          //font-size: 1.2em;
+          span{
+            color: var(--active-color-3);
+            padding: .2em .5em;
+            background: #e2e2e2;
+            border-radius: 5px;
+          }
+        }
         ul{
+          //font-size: 1.2em;
           margin-left: 50px;
           li{
             margin: 1em 0;
-            &.active{color: var(--active-color)}
+            &.active{color: var(--active-color-3)}
+          }
+        }
+      }
+      .wrapper-cl{
+        @include centerFlex;
+        flex-direction: column;
+        gap: 10vh;
+        .element{
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 6vw;
+          width: 100%;
+          @media all and (max-width: 600px) {
+            grid-template-columns: 1fr;
+            //.version{ .pos{align-items: flex-start!important} }
+          }
+          .version{
+            display: flex;
+            flex-direction: column;
+            .pos{
+              position: sticky;
+              top: 20vh;
+              display: flex;
+              flex-direction: column;
+              //align-items: flex-end;
+              .label{
+                //margin-top: 1em;
+                background: #e2e2e2;
+                padding: .2em .5em;
+                border-radius: 5px;
+                width: fit-content;
+                margin-bottom: .5em;
+              }
+            }
+          }
+          .content-cl{
+            width: 100%;
+            text-align: justify;
+            img{
+              width: 100%;
+              border-radius: 5px;
+              margin-bottom: 2vh;
+            }
+            h2{margin-bottom: 2vh}
           }
         }
       }
