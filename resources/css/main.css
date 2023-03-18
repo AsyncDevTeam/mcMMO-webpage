@@ -139,31 +139,39 @@ body main .content .img img.alone {
     grid-column: span 2;
   }
 }
-body main .content .wrapper-text {
+body main .content .wrapper-text,
+body main .content .wrapper-cl {
   text-align: justify;
 }
-body main .content .wrapper-text h1 {
+body main .content .wrapper-text h1,
+body main .content .wrapper-cl h1 {
   margin: 2vh 0;
 }
-body main .content .wrapper-text h1 a {
+body main .content .wrapper-text h1 a,
+body main .content .wrapper-cl h1 a {
   font-size: 75%;
 }
-body main .content .wrapper-text p {
+body main .content .wrapper-text p,
+body main .content .wrapper-cl p {
   line-height: 1.8;
 }
-body main .content .wrapper-text p span {
+body main .content .wrapper-text p span,
+body main .content .wrapper-cl p span {
   color: var(--active-color-3);
   padding: 0.2em 0.5em;
   background: #e2e2e2;
   border-radius: 5px;
 }
-body main .content .wrapper-text ul {
+body main .content .wrapper-text ul,
+body main .content .wrapper-cl ul {
   margin-left: 50px;
 }
-body main .content .wrapper-text ul li {
+body main .content .wrapper-text ul li,
+body main .content .wrapper-cl ul li {
   margin: 1em 0;
 }
-body main .content .wrapper-text ul li.active {
+body main .content .wrapper-text ul li.active,
+body main .content .wrapper-cl ul li.active {
   color: var(--active-color-3);
 }
 body main .content .wrapper-cl {
@@ -212,7 +220,7 @@ body main .content .wrapper-cl .element .content-cl img {
   margin-bottom: 2vh;
 }
 body main .content .wrapper-cl .element .content-cl h2 {
-  margin-bottom: 2vh;
+  margin: 2vh 0;
 }
 body .btn-main {
   width: 100%;
