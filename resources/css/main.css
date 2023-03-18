@@ -78,6 +78,8 @@ body main header .container .tabs a#a-active {
 }
 body main header .container .top {
   justify-content: flex-start;
+  text-decoration: none !important;
+  color: #000;
 }
 body main header .container .tabs {
   justify-content: space-between;
@@ -105,22 +107,6 @@ body main .content {
 }
 body main .content h1#h1-top {
   margin: 5vh auto 5vh;
-}
-body main .content div.github {
-  text-decoration: none;
-  list-style: none;
-  width: fit-content;
-  margin: 1em auto 1em 0;
-  padding: 0.2em 0.5em;
-  background: var(--active-color);
-  border-radius: 5px;
-}
-body main .content div.github:hover {
-  background: var(--active-color-2);
-}
-body main .content div.github a {
-  color: #fff;
-  text-decoration: none;
 }
 body main .content .img {
   display: grid;

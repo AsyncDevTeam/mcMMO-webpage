@@ -63,7 +63,11 @@ body{
           img{width: 50px}
           a#a-active{text-decoration: underline;}
         }
-        .top{justify-content: flex-start}
+        .top{
+          justify-content: flex-start;
+          text-decoration: none!important;
+          color: #000;
+        }
         .tabs{
           justify-content: space-between;
           //width: 100%;
@@ -89,20 +93,6 @@ body{
       width: var(--width-page);
       margin: 5vh 0;
       h1#h1-top{margin: 5vh auto 5vh}
-      div.github{
-        text-decoration: none;
-        list-style: none;
-        width: fit-content;
-        margin: 1em auto 1em 0;
-        padding: .2em .5em;
-        background: var(--active-color);
-        &:hover{background: var(--active-color-2)}
-        border-radius: 5px;
-        a{
-          color: #fff;
-          text-decoration: none;
-        }
-      }
       .img{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
