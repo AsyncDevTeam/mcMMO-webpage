@@ -117,5 +117,6 @@ fabric.properties
 .idea
 
 resources/php/secret.php
+resources/php/*.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/phpstorm
