@@ -101,9 +101,131 @@ body main header .container .tabs li.github a {
   color: #fff;
   text-decoration: none;
 }
+body main .release-banner {
+  width: 100%;
+  min-height: 40vh;
+  background: #2f2f2f;
+  margin-top: 5vh;
+  padding: 5vh 10%;
+  position: relative;
+  overflow: hidden;
+}
+@media all and (min-width: 1400px) {
+  body main .release-banner {
+    padding: 5vh 25%;
+  }
+}
+@media all and (max-width: 600px) {
+  body main .release-banner {
+    padding: 5vh 2.5%;
+  }
+}
+body main .release-banner .fg {
+  display: flex;
+  flex-direction: column;
+  z-index: 9998;
+  position: relative;
+}
+body main .release-banner .fg h1 {
+  font-size: 4em;
+  line-height: 1;
+  background: -webkit-linear-gradient(0, var(--active-color), #a7ccfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+body main .release-banner .fg h3 {
+  color: #a3a3a3;
+  margin-top: 1em;
+}
+body main .release-banner .fg h3 span {
+  color: white;
+}
+body main .release-banner .fg a {
+  margin-top: 2em;
+  width: fit-content;
+}
+body main .release-banner .fg .line {
+  margin-top: 5vh;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+}
+body main .release-banner .fg .line label {
+  width: 33vw;
+}
+body main .release-banner .fg .line label input {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1em 1em;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 0.8em;
+  width: 100%;
+}
+body main .release-banner .fg .line label input::placeholder {
+  color: white;
+}
+body main .release-banner .fg .line button {
+  width: fit-content;
+  font-size: 0.8em;
+  background: var(--active-color);
+  color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1em 2em;
+  cursor: pointer;
+}
+body main .release-banner .wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 6400px;
+  height: 198px;
+  animation: wave 6.8s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.3;
+}
+body main .release-banner .wave:nth-of-type(2) {
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 0.2;
+}
+body main .release-banner .wave:nth-of-type(3) {
+  animation: wave 6.9s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 0.6;
+}
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0, 30px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+@media all and (max-width: 600px) {
+  body main .release-banner a {
+    font-size: 0.8em;
+  }
+  body main .release-banner .line {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  body main .release-banner .line label {
+    width: 100% !important;
+  }
+}
 body main .content {
   width: var(--width-page);
-  margin: 5vh 0;
+  margin: 0 0 5vh 0;
 }
 body main .content h1#h1-top {
   margin: 5vh auto 5vh;
