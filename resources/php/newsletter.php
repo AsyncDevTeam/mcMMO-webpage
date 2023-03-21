@@ -45,9 +45,10 @@ function removeEmailFromFile($email, $fileName)
     fclose($file);
 }
 
-$fileName = 'newsletter.txt';
+$fileName = "";
+require "secret.php";
 
-if (isset($_GET['email']) && isset($_GET['type'])) {
+if (isset($_GET['email']) && isset($_GET['type']) && $fileName != "") {
     $email = $_GET['email'];
     $type = $_GET['type'];
 
@@ -73,5 +74,5 @@ if (isset($_GET['email']) && isset($_GET['type'])) {
         echo "Please double-check your email and try again.";
     }
 } else {
-    echo "null";
+    echo "Server error.";
 }
