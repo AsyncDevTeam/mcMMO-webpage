@@ -1,3 +1,3 @@
 # mcMMO-webpage
 
-[Link to website](https://asyncdevteam.github.io/mcMMO-webpage/)
+[Link to website](https://mcmmo.nicolasvaillant.net)
