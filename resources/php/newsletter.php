@@ -45,9 +45,10 @@ function removeEmailFromFile($email, $fileName)
     fclose($file);
 }
 
-$fileName = 'newsletter.txt';
+$fileName = "";
+require "secret.php";
 
-if (isset($_GET['email']) && isset($_GET['type'])) {
+if (isset($_GET['email']) && isset($_GET['type']) && $fileName != "") {
     $email = $_GET['email'];
     $type = $_GET['type'];
 
@@ -55,23 +56,23 @@ if (isset($_GET['email']) && isset($_GET['type'])) {
         if ($type === "subscribe") {
             if (!isEmailInFile($email, $fileName)) {
                 appendEmailToFile($email, $fileName);
-                echo "Thanks for your subscription ! We will contact you as soon as a new release is published.";
+                echo "success: Thanks for your subscription ! We will contact you as soon as a new release is published.";
             } else {
-                echo "You already subscribed to our newsletter and we truly thank you for that. If you want to unsubscribe, you are able to do this by clicking on the link 'unsubscribe' at the bottom of our release email.";
+                echo "info: You already subscribed to our newsletter and we truly thank you for that. If you want to unsubscribe, you are able to do this by clicking on the link 'unsubscribe' at the bottom of our release email.";
             }
         } elseif ($type === "unsubscribe") {
             if (isEmailInFile($email, $fileName)) {
                 removeEmailFromFile($email, $fileName);
-                echo "You have successfully unsubscribed from our newsletter. We hope to see you again soon.";
+                echo "success: You have successfully unsubscribed from our newsletter. We hope to see you again soon.";
             } else {
-                echo "The email you entered is not found in our subscription list. Please double-check your email and try again.";
+                echo "error: The email you entered is not found in our subscription list. Please double-check your email and try again.";
             }
         } else {
-            echo "Invalid request type.";
+            echo "error: Invalid request type.";
         }
     } else {
-        echo "Please double-check your email and try again.";
+        echo "error: Please double-check your email and try again.";
     }
 } else {
-    echo "null";
+    echo "error: Server error.";
 }
