@@ -6,6 +6,9 @@
   padding: 0;
   user-select: none;
 }
+
+*.hidden{display: none!important;}
+
 @mixin centerFlex{
   display: flex;
   justify-content: center;
@@ -109,6 +112,7 @@ body{
         flex-direction: column;
         z-index: 9998;
         position: relative;
+        align-items: flex-start;
         h1{
           font-size: 4em;
           line-height: 1;
@@ -121,6 +125,10 @@ body{
           color: #a3a3a3;
           margin-top: 1em;
           span{color: white}
+          &.version{
+            margin-top: 0.5em;
+            color: white;
+          }
         }
         a{
           margin-top: 2em;
@@ -197,12 +205,20 @@ body{
       }
 
       @media all and (max-width: 600px) {
-        a{font-size: .8em}
-        .line{
-          flex-direction: column;
-          align-items: flex-end;
-          label{
-            width: 100% !important;
+        .fg{
+          align-items: center!important;
+          h1{
+            text-align: center;
+            font-size: 2.5em!important;
+          }
+          h3{text-align: center}
+          a{font-size: .8em}
+          .line{
+            flex-direction: column;
+            align-items: flex-end;
+            label{
+              width: 100% !important;
+            }
           }
         }
       }
@@ -294,35 +310,5 @@ body{
         }
       }
     }
-  }
-  .btn-main {
-    width: 100%;
-    appearance: none;
-    background-color: #fff;
-    border: 1px solid rgba(27 31 35 / 15%);
-    border-radius: 6px;
-    box-shadow: rgba(27 31 35 / 4%) 0 1px 0, rgba(27 31 35 / 25%) 0 1px 0 inset;
-    box-sizing: border-box;
-    color: #000;
-    cursor: pointer;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    list-style: none;
-    padding: .5em 1em;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    gap: 1em;
-    position: relative;
-    /*transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);*/
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
-    white-space: nowrap;
-    word-wrap: break-word;
   }
 }

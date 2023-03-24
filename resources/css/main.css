@@ -7,6 +7,10 @@
   user-select: none;
 }
 
+*.hidden {
+  display: none !important;
+}
+
 body {
   font-family: "Noto Sans Mende Kikakui", sans-serif;
   --width-page:80%;
@@ -125,6 +129,7 @@ body main .release-banner .fg {
   flex-direction: column;
   z-index: 9998;
   position: relative;
+  align-items: flex-start;
 }
 body main .release-banner .fg h1 {
   font-size: 4em;
@@ -139,6 +144,10 @@ body main .release-banner .fg h3 {
   margin-top: 1em;
 }
 body main .release-banner .fg h3 span {
+  color: white;
+}
+body main .release-banner .fg h3.version {
+  margin-top: 0.5em;
   color: white;
 }
 body main .release-banner .fg a {
@@ -212,14 +221,24 @@ body main .release-banner .wave:nth-of-type(3) {
   }
 }
 @media all and (max-width: 600px) {
-  body main .release-banner a {
+  body main .release-banner .fg {
+    align-items: center !important;
+  }
+  body main .release-banner .fg h1 {
+    text-align: center;
+    font-size: 2.5em !important;
+  }
+  body main .release-banner .fg h3 {
+    text-align: center;
+  }
+  body main .release-banner .fg a {
     font-size: 0.8em;
   }
-  body main .release-banner .line {
+  body main .release-banner .fg .line {
     flex-direction: column;
     align-items: flex-end;
   }
-  body main .release-banner .line label {
+  body main .release-banner .fg .line label {
     width: 100% !important;
   }
 }
@@ -324,36 +343,6 @@ body main .content .wrapper-cl .element .content-cl img {
 }
 body main .content .wrapper-cl .element .content-cl h2 {
   margin: 2vh 0;
-}
-body .btn-main {
-  width: 100%;
-  appearance: none;
-  background-color: #fff;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(27, 31, 35, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #000;
-  cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  padding: 0.5em 1em;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  gap: 1em;
-  position: relative;
-  /*transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);*/
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-wrap: break-word;
 }
 
 /*# sourceMappingURL=main.css.map */
