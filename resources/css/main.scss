@@ -134,8 +134,11 @@ body{
           margin-top: 2em;
           width: fit-content;
         }
+        h2{
+          margin: 5vh 0 1vh;
+          color: white;
+        }
         .line{
-          margin-top: 5vh;
           display: flex;
           gap: 1em;
           width: 100%;

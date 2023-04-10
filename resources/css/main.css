@@ -154,8 +154,11 @@ body main .release-banner .fg a {
   margin-top: 2em;
   width: fit-content;
 }
+body main .release-banner .fg h2 {
+  margin: 5vh 0 1vh;
+  color: white;
+}
 body main .release-banner .fg .line {
-  margin-top: 5vh;
   display: flex;
   gap: 1em;
   width: 100%;
