@@ -369,6 +369,11 @@ body{
           }
         }
       }
+      .last-line{
+        @include centerFlex;
+        margin-top: 4em;
+        p{width: fit-content}
+      }
     }
     .btn-main {
       width: 100%;

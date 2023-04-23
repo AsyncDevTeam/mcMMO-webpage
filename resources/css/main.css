@@ -407,6 +407,16 @@ body main .content .library-themes .content-themes .card.mc-blue .banner-top {
 body main .content .library-themes .content-themes .card.mc-green .banner-top {
   background: linear-gradient(135deg, #80BD94 0%, #4B6E56 100%) fixed !important;
 }
+body main .content .last-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 4em;
+}
+body main .content .last-line p {
+  width: fit-content;
+}
 body main .btn-main {
   width: 100%;
   appearance: none;
