@@ -244,6 +244,9 @@ body{
           }
         }
       }
+      .wrapper-text{
+        margin-top: 1em;
+      }
       .wrapper-text,
       .wrapper-cl{
         h1{
@@ -266,6 +269,12 @@ body{
           li{
             margin: 1em 0;
             &.active{color: var(--active-color-3)}
+            span{
+              color: var(--active-color-3);
+              padding: .2em .5em;
+              background: #e2e2e2;
+              border-radius: 5px;
+            }
           }
         }
       }
@@ -312,6 +321,79 @@ body{
           }
         }
       }
+      .library-themes{
+        .list-title{
+          color: var(--active-color-3);
+        }
+        .content-themes{
+          margin-top: 2em;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1em;
+          .card{
+            overflow: hidden;
+            border: 1px solid #e2e2e2;
+            width: 100%;
+            height: auto;
+            @include centerFlex;
+            flex-direction: column;
+            border-radius: 10px;
+            .banner-top{
+              height: 100%;
+              width: 100%;
+            }
+            .line{
+              width: 100%;
+              @include centerFlex;
+              gap: 1em;
+              padding: 1em;
+              .raw{
+                margin-left: auto;
+                width: fit-content;
+              }
+            }
+            &.mc-blue{
+              .banner-top{
+                background: linear-gradient(135deg, #4B86B4 0%, #2B3856 100%) fixed !important;
+              }
+            }
+            &.mc-green{
+              .banner-top{
+                background: linear-gradient(135deg, #80BD94 0%, #4B6E56 100%) fixed !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-main {
+      width: 100%;
+      appearance: none;
+      background-color: var(--w);
+      border: 1px solid rgba(226 226 226 / 100%);
+      border-radius: 6px;
+      box-shadow: rgba(226 226 226 / 4%) 0 1px 0, rgba(226 226 226 / 25%) 0 1px 0 inset;
+      box-sizing: border-box;
+      color: var(--b);
+      cursor: pointer;
+      font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      list-style: none;
+      padding: .5em 1em;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      gap: 1em;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      white-space: nowrap;
+      word-wrap: break-word;
     }
   }
 }

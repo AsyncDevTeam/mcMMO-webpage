@@ -269,6 +269,9 @@ body main .content .img img.alone {
     grid-column: span 2;
   }
 }
+body main .content .wrapper-text {
+  margin-top: 1em;
+}
 body main .content .wrapper-text h1,
 body main .content .wrapper-cl h1 {
   margin: 2vh 0;
@@ -299,6 +302,13 @@ body main .content .wrapper-cl ul li {
 body main .content .wrapper-text ul li.active,
 body main .content .wrapper-cl ul li.active {
   color: var(--active-color-3);
+}
+body main .content .wrapper-text ul li span,
+body main .content .wrapper-cl ul li span {
+  color: var(--active-color-3);
+  padding: 0.2em 0.5em;
+  background: #e2e2e2;
+  border-radius: 5px;
 }
 body main .content .wrapper-cl {
   display: flex;
@@ -346,6 +356,79 @@ body main .content .wrapper-cl .element .content-cl img {
 }
 body main .content .wrapper-cl .element .content-cl h2 {
   margin: 2vh 0;
+}
+body main .content .library-themes .list-title {
+  color: var(--active-color-3);
+}
+body main .content .library-themes .content-themes {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+body main .content .library-themes .content-themes .card {
+  overflow: hidden;
+  border: 1px solid #e2e2e2;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+body main .content .library-themes .content-themes .card .banner-top {
+  height: 100%;
+  width: 100%;
+}
+body main .content .library-themes .content-themes .card .line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+body main .content .library-themes .content-themes .card .line .raw {
+  margin-left: auto;
+  width: fit-content;
+}
+body main .content .library-themes .content-themes .card.mc-blue .banner-top {
+  background: linear-gradient(135deg, #4B86B4 0%, #2B3856 100%) fixed !important;
+}
+body main .content .library-themes .content-themes .card.mc-green .banner-top {
+  background: linear-gradient(135deg, #80BD94 0%, #4B6E56 100%) fixed !important;
+}
+body main .btn-main {
+  width: 100%;
+  appearance: none;
+  background-color: var(--w);
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 6px;
+  box-shadow: rgba(226, 226, 226, 0.04) 0 1px 0, rgba(226, 226, 226, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: var(--b);
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 1em;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
 }
 
 /*# sourceMappingURL=main.css.map */

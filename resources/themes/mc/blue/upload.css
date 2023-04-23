@@ -1,0 +1,59 @@
+:root {
+    --tinted-main-light-color: 240 240 240;
+    --tinted-main-dark-color: 40 45 50;
+    --topbar-light-color: 245 245 245;
+    --topbar-dark-color: 60 65 70;
+    --active-light-color: 75 134 180;
+    --active-dark-color: var(--active-light-color);
+    --border-of-elements-light-color: 40 45 50;
+    --border-of-elements-dark-color: 245 245 245;
+    --grad1: #4B86B4!important;
+    --grad2: #2B3856!important;
+    --grad1_op: rgba(75, 134, 180, 0.5) !important;
+    --grad2_op: rgba(43, 56, 86, 0.5) !important;
+    --tint1:#4B86B4;
+    --tint2:#659ACD;
+    --tint3:#7EB2E2;
+    --tint4:#A7D1F1;
+    --tint5:#C6E2F2;
+    --tint6:#E4F0F6;
+    --tint7:#F1F7FB;
+}
+.rank-1,
+.rank-2,
+.rank-3,
+.rank-4{
+    border: 1px solid var(--grad1)!important;
+}
+.label-1{background: var(--tint1)!important}
+.label-2{background: var(--tint2)!important}
+.label-3{background: var(--tint3)!important}
+.label-4{background: var(--tint4)!important}
+.label-1,
+.label-2,
+.label-3,
+.label-4{
+    color: var(--w);
+}
+*[data-family='var(--f0)']{
+    background: var(--tint1)!important;
+    border: 1px solid var(--tint1)!important;
+}
+*[data-family='var(--f1)']{
+    background: var(--tint2)!important;
+    border: 1px solid var(--tint2)!important;
+}
+*[data-family='var(--f2)']{
+    background: var(--tint3)!important;
+    border: 1px solid var(--tint3)!important;
+}
+*[data-family='var(--f3)']{
+    background: var(--tint4)!important;
+    border: 1px solid var(--tint4)!important;
+}
+*[data-family='var(--f0)'],
+*[data-family='var(--f1)'],
+*[data-family='var(--f2)'],
+*[data-family='var(--f3)']{
+    color: var(--w)!important;
+}
