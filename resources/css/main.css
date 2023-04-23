@@ -366,6 +366,11 @@ body main .content .library-themes .content-themes {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
 }
+@media all and (max-width: 1000px) {
+  body main .content .library-themes .content-themes {
+    grid-template-columns: 1fr;
+  }
+}
 body main .content .library-themes .content-themes .card {
   overflow: hidden;
   border: 1px solid #e2e2e2;
@@ -377,6 +382,7 @@ body main .content .library-themes .content-themes .card {
   align-content: center;
   flex-direction: column;
   border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 body main .content .library-themes .content-themes .card .banner-top {
   height: 100%;
