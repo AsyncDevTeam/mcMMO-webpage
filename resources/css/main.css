@@ -339,6 +339,11 @@ body main .content .wrapper-cl .element .version .pos {
   display: flex;
   flex-direction: column;
 }
+@media all and (max-width: 1100px) and (max-height: 1000px) {
+  body main .content .wrapper-cl .element .version .pos {
+    top: 30%;
+  }
+}
 body main .content .wrapper-cl .element .version .pos .label {
   background: #e2e2e2;
   padding: 0.2em 0.5em;
@@ -356,6 +361,9 @@ body main .content .wrapper-cl .element .content-cl img {
 }
 body main .content .wrapper-cl .element .content-cl h2 {
   margin: 2vh 0;
+}
+body main .content .wrapper-cl .element .content-cl h2.first {
+  margin-top: 0;
 }
 body main .content .library-themes .list-title {
   color: var(--active-color-3);
