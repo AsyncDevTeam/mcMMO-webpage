@@ -365,6 +365,10 @@ body main .content .wrapper-cl .element .content-cl h2 {
 body main .content .wrapper-cl .element .content-cl h2.first {
   margin-top: 0;
 }
+body main .content .wrapper-cl .element .content-cl hr {
+  border: 0.5px solid #e2e2e2;
+  margin: 1em 0;
+}
 body main .content .library-themes .list-title {
   color: var(--active-color-3);
 }
@@ -453,6 +457,9 @@ body main .btn-main {
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
+}
+body main .btn-main.no-click {
+  cursor: default;
 }
 
 /*# sourceMappingURL=main.css.map */
